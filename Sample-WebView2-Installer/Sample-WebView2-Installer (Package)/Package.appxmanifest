@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:proto="http://schemas.microsoft.com/appx/2010/manifest"
+  IgnorableNamespaces="uap rescap proto">
+
+  <Identity
+    Name="82be126f-e33f-4c9d-828c-b13e06b80ea9"
+    Publisher="CN=mikefra"
+    Version="1.0.11.0" />
+
+  <Properties>
+    <DisplayName>Sample-WebView2-Installer (Package)</DisplayName>
+    <PublisherDisplayName>mikefra</PublisherDisplayName>
+    <Logo>Images\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="Sample-WebView2-Installer (Package)"
+        Description="Sample-WebView2-Installer (Package)"
+        BackgroundColor="transparent"
+        Square150x150Logo="Images\Square150x150Logo.png"
+        Square44x44Logo="Images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Images\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+		  <Application Id="Webview2App"
+	        Executable="Sample-Webview2\Sample-Webview2.exe"
+			EntryPoint="windows.fullTrustProcess">
+			  <uap:VisualElements
+    			AppListEntry = "none"
+				DisplayName="Webview2App"
+				Description="Webview2App"
+				BackgroundColor="transparent"
+				Square150x150Logo="Images\Square150x150Logo.png"
+				Square44x44Logo="Images\Square44x44Logo.png">
+				  <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+				  <uap:SplashScreen Image="Images\SplashScreen.png" />
+			  </uap:VisualElements>
+			  <!--Protocol for launcher to start main app (this app)-->
+			  <Extensions>
+				  <uap:Extension Category="windows.protocol">
+					  <uap:Protocol Name="samplewebview2"/>
+				  </uap:Extension>
+			  </Extensions>
+		  </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>
