@@ -21,9 +21,6 @@ namespace LauncherWebViewCheck
                     myProcess.StartInfo.CreateNoWindow = true;
                     myProcess.Start();
                 }
-
-
-
             }
 
             Process.Start(new ProcessStartInfo("samplewebview2:") { UseShellExecute = true });
