@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using Microsoft.Web.WebView2.Core;
+﻿using System.Diagnostics;
 
 namespace LauncherWebViewCheck
 {
@@ -10,8 +8,7 @@ namespace LauncherWebViewCheck
         static public bool IsNotInstalled => !IsInstalled;
         static void Main(string[] args)
         {
-            Console.WriteLine($"Hello World! WebView2 is{(IsInstalled ? string.Empty : " not")} installed");
-
+            Debug.WriteLine($"Hello World! WebView2 is{(IsInstalled ? string.Empty : " not")} installed");
             if (!IsInstalled)
             {
                 using (Process myProcess = new Process())
@@ -20,20 +17,12 @@ namespace LauncherWebViewCheck
                     myProcess.StartInfo.FileName = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
                     myProcess.StartInfo.CreateNoWindow = true;
                     myProcess.Start();
+                    
+                    myProcess.WaitForExit();
                 }
-            }
+             }
 
             Process.Start(new ProcessStartInfo("samplewebview2:") { UseShellExecute = true });
-            //using (Process myProcess = new Process())
-            //{
-            //    myProcess.StartInfo.UseShellExecute = false;
-            //    //myProcess.StartInfo.WorkingDirectory = "\\Sample-WebView2\\";
-            //    myProcess.StartInfo.FileName = "..\\Sample-WebView2\\Sample-WebView2.exe";
-            //    //myProcess.StartInfo.CreateNoWindow = true;
-            //    myProcess.Start();
-            //}
-
-
         }
     }
 }

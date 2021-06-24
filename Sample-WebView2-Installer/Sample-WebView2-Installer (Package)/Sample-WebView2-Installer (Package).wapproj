@@ -42,11 +42,11 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
-    <PackageCertificateKeyFile>Sample-WebView2-Installer %28Package%29_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>C:\workshop\MSIXWorkshop-ITPro\mikefra.pfx</PackageCertificateKeyFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
-    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
     <EntryPointProjectUniqueName>..\..\LauncherWebViewCheck\LauncherWebViewCheck.csproj</EntryPointProjectUniqueName>
   </PropertyGroup>
@@ -81,9 +81,6 @@
     <Content Include="Images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Images\StoreLogo.png" />
     <Content Include="Images\Wide310x150Logo.scale-200.png" />
-    <Content Include="MicrosoftEdgeWebView2RuntimeInstallerX64.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Sample-WebView2-Installer %28Package%29_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

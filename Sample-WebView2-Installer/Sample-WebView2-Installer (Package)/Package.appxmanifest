@@ -8,9 +8,9 @@
   IgnorableNamespaces="uap rescap proto">
 
   <Identity
-    Name="82be126f-e33f-4c9d-828c-b13e06b80ea9"
+    Name="Sample-WebView2-Installer"
     Publisher="CN=mikefra"
-    Version="1.0.11.0" />
+    Version="1.0.19.0" />
 
   <Properties>
     <DisplayName>Sample-WebView2-Installer (Package)</DisplayName>
@@ -41,9 +41,7 @@
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
-		  <Application Id="Webview2App"
-	        Executable="Sample-Webview2\Sample-Webview2.exe"
-			EntryPoint="windows.fullTrustProcess">
+	  <Application Id="Webview2App" Executable="Sample-Webview2\Sample-Webview2.exe" EntryPoint="Windows.FullTrustApplication">
 			  <uap:VisualElements
     			AppListEntry = "none"
 				DisplayName="Webview2App"

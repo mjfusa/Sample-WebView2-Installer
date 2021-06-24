@@ -26,9 +26,7 @@ namespace LauncherWebViewCheck
     public class InstallInfo
     {
         public InstallInfo(string version) => (Version) = (version);
-
         public string Version { get; }
-
         public InstallType InstallType => Version switch
         {
             var version when version.Contains("dev") => InstallType.EdgeChromiumDev,

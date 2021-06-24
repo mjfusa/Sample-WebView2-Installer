@@ -5,12 +5,10 @@
     xmlns:local="using:Sample_WebView2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    
-    mc:Ignorable="d" Activated="Window_Activated" >
+    mc:Ignorable="d" >
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -18,9 +16,8 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="1" Grid.ColumnSpan="2" Width="100" HorizontalAlignment="Center"/>
         <Button Grid.Row="0" Grid.ColumnSpan="2" Content="Click" Width="100" Click="Button_Click" HorizontalAlignment="Center"/>
-        <WebView2 Grid.Row="2"  Grid.ColumnSpan="2" x:Name="wvMain" Source="https://microsoft.com" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <WebView2 Grid.Row="1"  Grid.ColumnSpan="2" x:Name="wvMain" Source="https://microsoft.com" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 
 
