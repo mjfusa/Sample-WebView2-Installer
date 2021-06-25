@@ -10,6 +10,8 @@ This sample installs the [WebView2 Evergreen standalone installer](https://devel
 
 * [Windows App SDK (0.5.7)](https://github.com/microsoft/WindowsAppSDK) (Aka Project Reunion)
 
+* [Project Reunion Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftProjectReunion)
+
 * .NET 5 (5.0.7)
 
 
