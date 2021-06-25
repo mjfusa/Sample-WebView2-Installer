@@ -4,6 +4,16 @@
 
 This sample installs the [WebView2 Evergreen standalone installer](https://developer.microsoft.com/en-us/microsoft-edge/webview2/). This will install the WebView2 runtime in scenarios where the target machine does not have internet access.
 
+## Built with
+
+* [Visual Studio 2019 Version 16.10.2](https://visualstudio.com)
+
+* [Windows App SDK (0.5.7)](https://github.com/microsoft/WindowsAppSDK) (Aka Project Reunion)
+
+* .NET 5 (5.0.7)
+
+
+
 ## Projects
 
 **LauncherWebViewCheck** This checks to see if the WebView2 runtime is installed. If it is not installed, it will call the installer - ```MicrosoftEdgeWebView2RuntimeInstallerX64.exe```.
