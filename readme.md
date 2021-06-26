@@ -26,7 +26,7 @@ Some key points about the project file:
 
  ```XML
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>     <!-- Default is Exe for console all. Setting to WinExe prevents the console window from showing. -->
+    <OutputType>WinExe</OutputType>     <!-- Default is Exe for a console app. Setting to WinExe prevents the console window from showing. -->
     <TargetFramework>net5.0</TargetFramework>
     <Platforms>x86;x64</Platforms>     <!-- This is required for .NET to know which platforms to target. -->
   </PropertyGroup>
@@ -41,7 +41,7 @@ Process.Start(new ProcessStartInfo("samplewebview2:") { UseShellExecute = true }
 ```
 **Sample-WebView2** This is the main app that hosts the WebView 2 control. You will see the default Microsoft.com page displayed. Clicking the button will launch the Twitter.com home page.
 
-**Sample-WebView2-Installer (Package)** This packages both the launcher and the main app. Here are some key points about the Package.appxmanifest:
+**Sample-WebView2-Installer (Package)** This project packages both the launcher and the main app. Here are some key points about the Package.appxmanifest:
 
 ```XML
   <Applications> <!-- First of two applications. First is the launcher app, the Second is the main app -->
@@ -58,7 +58,7 @@ Process.Start(new ProcessStartInfo("samplewebview2:") { UseShellExecute = true }
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
-	  <Application Id="Webview2App" Executable="Sample-Webview2\Sample-Webview2.exe" EntryPoint="Windows.FullTrustApplication"> <!-- Main app. This entry in the manifest had me be manually added.  -->
+	  <Application Id="Webview2App" Executable="Sample-Webview2\Sample-Webview2.exe" EntryPoint="Windows.FullTrustApplication"> <!-- Main app. This entry in the manifest had to be manually added.  -->
 			  <uap:VisualElements
     			AppListEntry = "none"
 				DisplayName="Webview2App"
