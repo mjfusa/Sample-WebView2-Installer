@@ -18,7 +18,7 @@ This sample installs the [WebView2 Evergreen standalone installer](https://devel
 
 ## Projects
 
-**LauncherWebViewCheck** This checks to see if the WebView2 runtime is installed. If it is not installed, it will call the installer - ```MicrosoftEdgeWebView2RuntimeInstallerX64.exe```.
+**LauncherWebViewCheck** (.NET 5 Console app C#) This checks to see if the WebView2 runtime is installed. If it is not installed, it will call the installer - ```MicrosoftEdgeWebView2RuntimeInstallerX64.exe```.
 
 **Note:** ```MicrosoftEdgeWebView2RuntimeInstallerX64.exe``` is included in the project - _**but is a text file!**_ Please replace this with a real ```MicrosoftEdgeWebView2RuntimeInstallerX64.exe``` downloaded from the link in the description. (This was done since it exceed the GitHub file size limit.).
 
@@ -39,9 +39,9 @@ The launcher starts the main app via it's registered protocol (**samplewebview2*
 ```C#
 Process.Start(new ProcessStartInfo("samplewebview2:") { UseShellExecute = true });
 ```
-**Sample-WebView2** This is the main app that hosts the WebView 2 control. You will see the default Microsoft.com page displayed. Clicking the button will launch the Twitter.com home page.
+**Sample-WebView2** (Windows App SDK app C#) This is the main app that hosts the WebView 2 control. You will see the default Microsoft.com page displayed. Clicking the button will launch the Twitter.com home page.
 
-**Sample-WebView2-Installer (Package)** This project packages both the launcher and the main app. Here are some key points about the Package.appxmanifest:
+**Sample-WebView2-Installer (Package)** (Windows Application Packaging Project C#) This project packages both the launcher and the main app. Here are some key points about the Package.appxmanifest:
 
 ```XML
   <Applications> <!-- First of two applications. First is the launcher app, the Second is the main app -->
