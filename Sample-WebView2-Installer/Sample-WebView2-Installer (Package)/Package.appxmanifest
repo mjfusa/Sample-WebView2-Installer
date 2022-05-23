@@ -10,7 +10,7 @@
   <Identity
     Name="Sample-WebView2-Installer"
     Publisher="CN=mikefra"
-    Version="1.0.19.0" />
+    Version="1.0.21.0" />
 
   <Properties>
     <DisplayName>Sample-WebView2-Installer (Package)</DisplayName>
@@ -41,24 +41,6 @@
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
-	  <Application Id="Webview2App" Executable="Sample-Webview2\Sample-Webview2.exe" EntryPoint="Windows.FullTrustApplication">
-			  <uap:VisualElements
-    			AppListEntry = "none"
-				DisplayName="Webview2App"
-				Description="Webview2App"
-				BackgroundColor="transparent"
-				Square150x150Logo="Images\Square150x150Logo.png"
-				Square44x44Logo="Images\Square44x44Logo.png">
-				  <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
-				  <uap:SplashScreen Image="Images\SplashScreen.png" />
-			  </uap:VisualElements>
-			  <!--Protocol for launcher to start main app (this app)-->
-			  <Extensions>
-				  <uap:Extension Category="windows.protocol">
-					  <uap:Protocol Name="samplewebview2"/>
-				  </uap:Extension>
-			  </Extensions>
-		  </Application>
   </Applications>
 
   <Capabilities>

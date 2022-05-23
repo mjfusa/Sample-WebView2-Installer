@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31320.298
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32505.426
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Sample-WebView2-Installer (Package)", "Sample-WebView2-Installer\Sample-WebView2-Installer (Package)\Sample-WebView2-Installer (Package).wapproj", "{365B6822-595A-4C96-BCCA-5BC745E0286F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample-WebView2", "Sample-WebView2-Installer\Sample-WebView2-Installer\Sample-WebView2.csproj", "{BCA70FE7-FB24-4BFD-AD9D-34B935E91B1D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LauncherWebViewCheck", "LauncherWebViewCheck\LauncherWebViewCheck.csproj", "{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,25 +59,6 @@ Global
 		{BCA70FE7-FB24-4BFD-AD9D-34B935E91B1D}.Release|x64.Build.0 = Release|x64
 		{BCA70FE7-FB24-4BFD-AD9D-34B935E91B1D}.Release|x86.ActiveCfg = Release|x86
 		{BCA70FE7-FB24-4BFD-AD9D-34B935E91B1D}.Release|x86.Build.0 = Release|x86
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|ARM.Build.0 = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|arm64.ActiveCfg = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|arm64.Build.0 = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|x64.ActiveCfg = Debug|x64
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|x64.Build.0 = Debug|x64
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Debug|x86.Build.0 = Debug|Any CPU
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|Any CPU.ActiveCfg = Release|x86
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|Any CPU.Build.0 = Release|x86
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|ARM.ActiveCfg = Release|x86
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|arm64.ActiveCfg = Release|ARM64
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|arm64.Build.0 = Release|ARM64
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|x64.ActiveCfg = Release|x64
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|x64.Build.0 = Release|x64
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|x86.ActiveCfg = Release|x86
-		{FEA35860-32B1-41E1-B6E2-24A8D464D7EC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

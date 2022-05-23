@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -15,6 +16,9 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Path = System.IO.Path;
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -33,6 +37,11 @@ namespace Sample_WebView2
         public App()
         {
             this.InitializeComponent();
+            StorageFolder localFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            String fixedPath = Path.Combine(localFolder.Path, "Microsoft.WebView2.FixedVersionRuntime.101.0.1210.53.x64");
+            Debug.WriteLine($"Launch path [{localFolder.Path}]");
+            Debug.WriteLine($"FixedRuntime path [{fixedPath}]");
+            Environment.SetEnvironmentVariable("WEBVIEW2_BROWSER_EXECUTABLE_FOLDER", fixedPath);
         }
 
         /// <summary>
